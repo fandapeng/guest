@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    {% load bootstrap3 %} {% bootstrap_css %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>发布会签到系统</title>
+
+</head>
+
+<body>
+
+    <div class="container" style="width: 400px ;margin-top: 150px">
+
+        <form class="form-signin" method="post" action="/login_action/">
+            <h2 class="form-signin-heading">发布会管理系统</h2>
+            <label for="inputUsername" class="sr-only">Email address</label>
+            <input type="text" id="inputUsername" class="form-control" placeholder="Username" name="username" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+            <font color="red">{{ error }}</font> <br/>
+            <div class="checkbox">
+                <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+            </div>
+            <button class="btn btn-lg btn-success btn-block" type="submit">登录</button>
+        </form>
+
+    </div>
+    <!-- /container -->
+
+</body>
+
+</html>
